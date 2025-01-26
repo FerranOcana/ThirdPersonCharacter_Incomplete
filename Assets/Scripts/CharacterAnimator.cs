@@ -57,4 +57,20 @@ public class CharacterAnimator : MonoBehaviour
             lookat = cameraLookAt.transform.position + forwardLookAt * distance;
         }
     }
+    private void OnAnimatorIK(int layerIndex)
+    {
+        anim.SetLookAtWeight(1);
+        anim.SetLookAtPosition(gunPivot.position + lookat);
+
+        anim.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
+        anim.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
+        anim.SetIKPosition(AvatarIKGoal.RightHand, gunRightHand.position);
+        anim.SetIKRotation(AvatarIKGoal.RightHand, gunRightHand.rotation);
+
+        anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
+        anim.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
+        anim.SetIKPosition(AvatarIKGoal.LeftHand, gunLeftHand.position);
+        anim.SetIKRotation(AvatarIKGoal.LeftHand, gunLeftHand.rotation);
+
+    }
 }

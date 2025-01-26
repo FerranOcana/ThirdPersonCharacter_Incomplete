@@ -2841,7 +2841,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.00000840296, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.005459152, y: -0.015160315, z: 0.29446113}
+  m_ConnectedAnchor: {x: 0.0054591447, y: -0.015160434, z: 0.29446113}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -3684,6 +3684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 545399007}
+  - component: {fileID: 545399008}
   m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
@@ -3706,6 +3707,22 @@ Transform:
   m_Father: {fileID: 1780671016}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545399008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545399006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b7f23132a8bf74d84ef2080119a5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  realAimObject: {fileID: 1591535079}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 55
 --- !u!1 &557982125
 GameObject:
   m_ObjectHideFlags: 0
@@ -8789,6 +8806,7 @@ GameObject:
   - component: {fileID: 963194230}
   - component: {fileID: 963194229}
   - component: {fileID: 963194231}
+  - component: {fileID: 963194232}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8961,6 +8979,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDistance: 1000
   lookAtMask:
+    serializedVersion: 2
+    m_Bits: 55
+--- !u!114 &963194232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d757660d133a0a469910eafdd9c8f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1089316526}
+  startDistanciaCam: 0
+  minRotationX: -45
+  maxRotationX: 45
+  sensibilidadX: 1
+  sensibilidadY: 1
+  camVelocity: 10
+  mask:
     serializedVersion: 2
     m_Bits: 55
 --- !u!1 &1050062902
@@ -9558,6 +9598,7 @@ GameObject:
   - component: {fileID: 1089316524}
   - component: {fileID: 1089316528}
   - component: {fileID: 1089316527}
+  - component: {fileID: 1089316530}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -9623,7 +9664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089316523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5.06, z: 1.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9675,6 +9716,27 @@ MonoBehaviour:
   speedTurn: 10
   jumpForce: 5
   airSpeedFollowup: 1
+--- !u!95 &1089316530
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089316523}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1095641267
 GameObject:
   m_ObjectHideFlags: 0

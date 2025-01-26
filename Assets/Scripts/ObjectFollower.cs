@@ -6,6 +6,7 @@ public class ObjectFollower : MonoBehaviour
 {
     public Transform follow;
     public Vector3 offset;
+ 
     public float followSpeed;
     void Update()
     {
@@ -17,5 +18,7 @@ public class ObjectFollower : MonoBehaviour
         {
             transform.position = follow.position + offset;
         }
+        transform.rotation = follow.rotation;  
+       
     }
 }
